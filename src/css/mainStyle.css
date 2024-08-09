@@ -1,42 +1,100 @@
 .gradient-text {
-    background: linear-gradient(45deg, #f7b9ff, #ff64cb, rgb(255, 3, 100), yellow);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    position: relative;
+  background: linear-gradient(45deg, #f7b9ff, #ff64cb, rgb(255, 3, 100), yellow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
 }
+
+;
 
 .gradient-text::before {
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    background: linear-gradient(45deg, #f7b9ff, #ff64cb, rgb(255, 3, 100), yellow);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    filter: blur(15px);
-    opacity: 2;
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: linear-gradient(45deg, #f7b9ff, #ff64cb, rgb(255, 3, 100), yellow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: blur(15px);
+  opacity: 2;
 }
 
+;
+
 .three-d-button {
-    background-color: #d53bf7; /* Base color */
-    border: none;
-    border-radius: 12px;
-    color: white;
-    padding: 15px 30px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 6px #8a138c; /* Darker shade for shadow */
-    position: relative;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px #8a138c;
+  /* Darker shade for shadow */
+  position: relative;
+}
+
+;
+
+.three-d-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px #881e8a;
+  /* Adjust shadow to create 3D effect */
+}
+
+;
+
+.three-d-button:active {
+  transform: translateY(2px);
+  box-shadow: 0 4px #731e8a;
+}
+
+;
+
+.hover-link {
+  text-decoration: none;
+  list-style: none;
+  padding: 0 5px;
+  font-size: large;
+  font-weight: 500;
+  transition: 0.5s;
+}
+
+;
+
+.hover-link:hover {
+  transform: scale3d(1.4, 1.2, 1);
+}
+
+;
+
+.hiding {
+  display: flex;
+}
+
+.hiding-position {
+  position: absolute;
+}
+
+;
+
+@media (max-width: 768px) {
+  .hiding {
+    display: none;
   }
-  
-  .three-d-button:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px #881e8a; /* Adjust shadow to create 3D effect */
+
+  ;
+}
+
+;
+
+@media (max-width: 768px) {
+  .hiding-position {
+    position: initial;
   }
-  
-  .three-d-button:active {
-    transform: translateY(2px);
-    box-shadow: 0 4px #731e8a;
-  }
+
+  ;
+}
+
+;

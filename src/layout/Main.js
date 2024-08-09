@@ -6,9 +6,15 @@ import Footer from '../Pages/Footer/Footer';
 const Main = () => {
     return (
         <div>
-            <Navbar></Navbar>
-            <Outlet></Outlet>
-            <Footer></Footer>
+            <div className='w-full h-auto'>
+                <Navbar></Navbar>
+            </div>
+            <div className='w-full h-auto'>
+                <Outlet></Outlet>
+            </div>
+            <div className='w-full h-4/5'>
+                <Footer></Footer>
+            </div>
         </div>
     );
 };
